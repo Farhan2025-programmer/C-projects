@@ -48,7 +48,6 @@ int main() {
     }
 
     int start = 1;
-    int rightSpace = n - star;
     int leftSpace = n - star;
 
 
@@ -61,12 +60,7 @@ int main() {
             cout << "* ";
         }
 
-        for (int rightSpaceCounter = 0; rightSpaceCounter <= rightSpace; rightSpaceCounter++) {
-            cout << " ";
-        }
-
         leftSpace--;
-        rightSpace--;
         star++;
 
         cout << endl;

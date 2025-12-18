@@ -116,6 +116,34 @@ vector<Cantact> searcherByName (string searchByName) {
     return results;
 }
 
+vector<Cantact> searcherByLastName (string searchByLastName) {
+
+    vector<Cantact> results;
+    int resultLenght = 0;
+
+    for (Cantact item : users) {
+        if (item.lastName.length() >= searchByLastName.length()) {
+            for (int i = 0; i < searchByLastName.length(); i++) {
+                if (item.lastName[i] == searchByLastName[i]) {
+                    cout << "\n\n" << item.lastName[i] << " == " << searchByLastName[i] << endl;
+                    resultLenght++;
+                }
+            }
+            if (resultLenght == searchByLastName.length()) {
+                cout << resultLenght << " - " << searchByLastName << endl;
+                Cantact newResult(item.name, item.lastName, item.phoneNumber);
+                results.push_back(newResult);
+            }
+            resultLenght = 0;
+        }
+    }
+
+    cout << "\n" << "___________________________________" << endl;
+    allContactsPrinter(results);
+    cout << "\n" << "___________________________________" << endl;
+    return results;
+}
+
 vector<Cantact> searcherByPhoneNumber(string searchByPhoneNumber) {
 
     vector<Cantact> results;
