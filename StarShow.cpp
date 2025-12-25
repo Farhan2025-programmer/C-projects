@@ -15,7 +15,7 @@ int main() {
 
     for (int spaceCounter = 1; spaceCounter <= n; spaceCounter++) {
         cout << " ";
-        
+
         space--;
         star++;
         

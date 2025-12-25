@@ -2,17 +2,10 @@
 using namespace std;
 
 int main() {
-	int numberOne = 1955;
-	int numberTwo;
-
-	cout << &numberOne;
-
-	// cout << "Enter number" << endl;
-	// cin >> numberOne >> numberTwo;
-
-	int sum = numberOne + numberTwo;
-
-    cout << sum << endl;
-	
+	int food = 10;
+	int *test = new int;
+	cout << sizeof(test) << endl;
+	int *ptr = &food;
+	cout << ptr << endl;
 	return 0;
 }
